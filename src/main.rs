@@ -4,22 +4,19 @@ use maple_core::prelude::*;
 use wasm_bindgen::JsCast;
 use web_sys::{Event, HtmlInputElement};
 
-fn main() {
-    console_error_panic_hook::set_once();
-    console_log::init_with_level(log::Level::Debug).unwrap();
+fn App() -> TemplateResult {
+    let name = Signal::new(String::new());
 
-    let (name, set_name) = create_signal(String::new());
-
-    let displayed_name = create_memo(move || {
-        if *name() == "" {
+    let displayed_name = cloned!((name) => move || {
+        if name.get().is_empty() {
             "World".to_string()
         } else {
-            name().as_ref().clone()
+            name.get().as_ref().clone()
         }
     });
 
     let handle_change = move |event: Event| {
-        set_name(
+        name.set(
             event
                 .target()
                 .unwrap()
@@ -29,17 +26,22 @@ fn main() {
         );
     };
 
-    let root = template! {
+    template! {
         div {
             h1 {
-                # "Hello "
-                # displayed_name()
-                # "!"
+                "Hello "
+                (displayed_name())
+                "!"
             }
 
             input(placeholder="Your name", on:input=handle_change)
         }
-    };
+    }
+}
 
-    render(root);
+fn main() {
+    console_error_panic_hook::set_once();
+    console_log::init_with_level(log::Level::Debug).unwrap();
+
+    render(|| template! { App() });
 }

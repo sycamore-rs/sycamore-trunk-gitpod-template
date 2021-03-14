@@ -64,9 +64,9 @@ dependencies = [
 
 [[package]]
 name = "maple-core"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dfaeb6ff75ff543facebcdd4865472c88a180ed82f592c962bcf0429041c2691"
+checksum = "fa0f6aae3da0b7e62df985cddc8effd9a75aff589033cef4623b7d78b2294caa"
 dependencies = [
  "maple-core-macro",
  "wasm-bindgen",
@@ -75,9 +75,9 @@ dependencies = [
 
 [[package]]
 name = "maple-core-macro"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "34cb4751cee9c0316939e4ff7a5fc3311e3c0fec3943d7bfd09b5c93498b6510"
+checksum = "6757bcafdb7e796ac8906d9a434560a7b51b3a6cb2052c2e870d23de58fae80e"
 dependencies = [
  "proc-macro2",
  "quote",
