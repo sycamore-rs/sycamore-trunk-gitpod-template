@@ -34,7 +34,7 @@ fn App() -> TemplateResult {
                 "!"
             }
 
-            input(placeholder="Your name", on:input=handle_change)
+            input(placeholder="What is your name?", on:input=handle_change)
         }
     }
 }
