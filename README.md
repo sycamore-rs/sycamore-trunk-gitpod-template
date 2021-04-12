@@ -1,6 +1,6 @@
 # Maple Trunk Gitpod Template
 
-This is template for [Maple](https://github.com/lukechu10/maple) + [Trunk](https://trunkrs.dev/) on [gitpod.io](https://gitpod.io).
+This is template for [Maple](https://github.com/lukechu10/maple) + [Trunk](https://trunkrs.dev/) on [gitpod.io](https://www.gitpod.io).
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/lukechu10/maple-trunk-gitpod-template)
 
