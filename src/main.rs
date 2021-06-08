@@ -1,10 +1,11 @@
 #![allow(non_snake_case)]
 
-use maple_core::prelude::*;
+use sycamore::prelude::*;
 use wasm_bindgen::JsCast;
 use web_sys::{Event, HtmlInputElement};
 
-fn App() -> TemplateResult {
+#[component(App<G>)]
+fn app() -> TemplateResult<G> {
     let name = Signal::new(String::new());
 
     let displayed_name = cloned!((name) => move || {
