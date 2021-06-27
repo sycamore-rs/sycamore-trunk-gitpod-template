@@ -5,7 +5,7 @@ use wasm_bindgen::JsCast;
 use web_sys::{Event, HtmlInputElement};
 
 #[component(App<G>)]
-fn app() -> TemplateResult<G> {
+fn app() -> Template<G> {
     let name = Signal::new(String::new());
 
     let displayed_name = cloned!((name) => move || {
