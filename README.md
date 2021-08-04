@@ -25,4 +25,4 @@ Unless overwritten, the output will be located in the `dist` directory.
 
 ## Using this template
 
-This template is intended to be used as a quick way to test out something using Maple without having to setup a local environnement.
+This template is intended to be used as a quick way to test out something using Sycamore without having to setup a local environnement.
