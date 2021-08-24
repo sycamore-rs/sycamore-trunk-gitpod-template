@@ -3,7 +3,7 @@ image:
 
 tasks:
   - command: trunk serve
-    prebuild: trunk build # Prebuild app so running trunk-serve would be much faster
+    init: trunk build # Prebuild app so running trunk-serve would be much faster
 
 ports:
   - port: 8080
