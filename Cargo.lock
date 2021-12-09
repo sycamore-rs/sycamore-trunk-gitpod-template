@@ -4,9 +4,9 @@ version = 3
 
 [[package]]
 name = "ahash"
-version = "0.7.4"
+version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "43bb833f0bf979d8475d38fbf09ed3b8a55e1885fe93ad3f93239fc6a4f17b98"
+checksum = "fcb51a0695d8f838b1ee009b3fbf66bda078cd64590202a864a8f3e8c4315c47"
 dependencies = [
  "getrandom",
  "once_cell",
@@ -194,10 +194,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "692fcb63b64b1758029e0a96ee63e049ce8c5948587f2f7208df04625e5f6b56"
 
 [[package]]
-name = "proc-macro2"
-version = "1.0.29"
+name = "paste"
+version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b9f5105d4fdaab20335ca9565e106a5d9b82b6219b5ba735731124ac6711d23d"
+checksum = "0744126afe1a6dd7f394cb50a716dbe086cb06e255e53d8d0185d82828358fb5"
+
+[[package]]
+name = "proc-macro2"
+version = "1.0.33"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fb37d2df5df740e582f28f8560cf425f52bb267d872fe58358eadb554909f07a"
 dependencies = [
  "unicode-xid",
 ]
@@ -225,14 +231,15 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 
 [[package]]
 name = "sycamore"
-version = "0.6.2"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b2a0b673381969050e0673eb4e6b8a88bfb62f48bea42403e071dbf7f0b7fa7e"
+checksum = "fbff2c313c75b52785b39fcd508807c1d7e5372a8a9d319e381ebdf68ee9f1c3"
 dependencies = [
  "ahash",
  "indexmap",
  "js-sys",
  "lexical",
+ "paste",
  "smallvec",
  "sycamore-macro",
  "sycamore-reactive",
@@ -242,9 +249,9 @@ dependencies = [
 
 [[package]]
 name = "sycamore-macro"
-version = "0.6.2"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "413336add1009491044fa19e3ce944eddb35a2ea4ac8cf9ef869a688a59ac695"
+checksum = "d0f2b42f470ceafe6939660cb79545f907978e8d6a0c4ac3c146c332dd391aa7"
 dependencies = [
  "once_cell",
  "proc-macro2",
@@ -254,9 +261,9 @@ dependencies = [
 
 [[package]]
 name = "sycamore-reactive"
-version = "0.6.2"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7ee271ed5a0578dd40fbd303f986d29e0196b2168ea0202206934a2fec0a353b"
+checksum = "96cf29f9778a127db8c5940e7e1439a84b73b607baa4f3ea35e7c2f773e77386"
 dependencies = [
  "ahash",
  "indexmap",
@@ -279,9 +286,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "1.0.80"
+version = "1.0.82"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d010a1623fbd906d51d650a9916aaefc05ffa0e4053ff7fe601167f3e715d194"
+checksum = "8daf5dd0bb60cbd4137b1b587d2fc0ae729bc07cf01cd70b36a1ed5ade3b9d59"
 dependencies = [
  "proc-macro2",
  "quote",

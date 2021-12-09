@@ -3,7 +3,7 @@ use wasm_bindgen::JsCast;
 use web_sys::{Event, HtmlInputElement};
 
 #[component(App<G>)]
-fn app() -> Template<G> {
+fn app() -> View<G> {
     let name = Signal::new(String::new());
 
     let displayed_name = cloned!((name) => move || {
@@ -25,7 +25,7 @@ fn app() -> Template<G> {
         );
     };
 
-    template! {
+    view! {
         div {
             h1 {
                 "Hello "
@@ -42,5 +42,5 @@ fn main() {
     console_error_panic_hook::set_once();
     console_log::init_with_level(log::Level::Debug).unwrap();
 
-    sycamore::render(|| template! { App() });
+    sycamore::render(|| view! { App() });
 }
