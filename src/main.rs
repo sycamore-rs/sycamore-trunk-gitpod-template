@@ -1,31 +1,18 @@
 use sycamore::prelude::*;
-use wasm_bindgen::JsCast;
-use web_sys::{Event, HtmlInputElement};
 
-#[component(App<G>)]
-fn app() -> View<G> {
-    let name = Signal::new(String::new());
+#[component]
+fn App<G: Html>(ctx: ScopeRef) -> View<G> {
+    let name = ctx.create_signal(String::new());
 
-    let displayed_name = cloned!((name) => move || {
+    let displayed_name = move || {
         if name.get().is_empty() {
             "World".to_string()
         } else {
             name.get().as_ref().clone()
         }
-    });
-
-    let handle_change = move |event: Event| {
-        name.set(
-            event
-                .target()
-                .unwrap()
-                .dyn_into::<HtmlInputElement>()
-                .unwrap()
-                .value(),
-        );
     };
 
-    view! {
+    view! { ctx,
         div {
             h1 {
                 "Hello "
@@ -33,7 +20,7 @@ fn app() -> View<G> {
                 "!"
             }
 
-            input(placeholder="What is your name?", on:input=handle_change)
+            input(placeholder="What is your name?", bind:value=name)
         }
     }
 }
@@ -42,5 +29,5 @@ fn main() {
     console_error_panic_hook::set_once();
     console_log::init_with_level(log::Level::Debug).unwrap();
 
-    sycamore::render(|| view! { App() });
+    sycamore::render(|ctx| view! { ctx, App {} });
 }
