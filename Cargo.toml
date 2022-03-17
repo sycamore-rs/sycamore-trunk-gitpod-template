@@ -1,13 +1,12 @@
 [package]
-authors = [""]
-edition = "2018"
 name = "sycamore-trunk-gitpod-template"
 version = "0.1.0"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-console_error_panic_hook = "0.1.6"
+console_error_panic_hook = "0.1.7"
 console_log = "0.2.0"
 log = "0.4.14"
 sycamore = "0.8.0-beta.3"
