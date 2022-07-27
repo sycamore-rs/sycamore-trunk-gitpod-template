@@ -1,10 +1,10 @@
 use sycamore::prelude::*;
 
 #[component]
-fn App<G: Html>(ctx: ScopeRef) -> View<G> {
-    let name = ctx.create_signal(String::new());
+fn App<G: Html>(cx: Scope) -> View<G> {
+    let name = create_signal(cx, String::new());
 
-    let displayed_name = move || {
+    let displayed_name = || {
         if name.get().is_empty() {
             "World".to_string()
         } else {
@@ -12,7 +12,7 @@ fn App<G: Html>(ctx: ScopeRef) -> View<G> {
         }
     };
 
-    view! { ctx,
+    view! { cx,
         div {
             h1 {
                 "Hello "
