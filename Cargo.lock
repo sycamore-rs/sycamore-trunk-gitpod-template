@@ -158,9 +158,9 @@ checksum = "2fd0db749597d91ff862fd1d55ea87f7855a744a8425a64695b6fca237d1dad1"
 
 [[package]]
 name = "sycamore"
-version = "0.8.0"
+version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3e4decd3fabbb4cfa8ef4d8b4469c7d35d65555806f6c6642a2733d892472ffa"
+checksum = "67817393b3c9828db84614f64db9a1ebb94729ce3a3751c41e7ff23d3f8e7f00"
 dependencies = [
  "ahash",
  "indexmap",
