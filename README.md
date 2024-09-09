@@ -1,3 +1,5 @@
+> ⚠️⚠️⚠️ Archived: use [`sycamore-rs/start`](https://github.com/sycamore-rs/start) instead.
+
 # Sycamore Trunk Gitpod Template
 
 This is template for [Sycamore](https://github.com/sycamore-rs/sycamore) + [Trunk](https://trunkrs.dev/) on [gitpod.io](https://www.gitpod.io).
